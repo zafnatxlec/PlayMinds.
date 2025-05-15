@@ -220,3 +220,22 @@ h2 {
     font-size: 18px;
   }
 }
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  .btn-jugar {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .card-juego img {
+    max-width: 120px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}

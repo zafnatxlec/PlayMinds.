@@ -19,6 +19,7 @@ a {
   background-color: #12003b;
   padding: 10px 20px;
   color: white;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -37,8 +38,11 @@ a {
   display: flex;
   gap: 15px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
+/* Botones */
 .btn-categorias,
 .btn-secundario {
   background-color: #5c3df4;
@@ -98,11 +102,13 @@ h1 {
   font-size: 36px;
   color: #1d004b;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 h2 {
   font-size: 28px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Card del juego */
@@ -116,7 +122,7 @@ h2 {
 }
 
 .card-juego img {
-  max-width: 80px;
+  max-width: 160px;
 }
 
 .card-juego p {
@@ -144,7 +150,6 @@ h2 {
 /* Sección de descripción */
 .descripcion {
   margin-top: 60px;
-   background-color: #7a36ff;
   background: #ffffff;
   padding: 30px;
   border-radius: 15px;
@@ -161,10 +166,57 @@ h2 {
   padding: 15px;
   margin-top: 40px;
 }
-/* Método 2: tamaño relativo */
-    .img-relativa {
-      width: 200%;
-      height: 200%;
-      border: 0px solid green;
-      margin-bottom: 20px;
-    }
+
+/* Imagen ampliada */
+.img-relativa {
+  width: 200%;
+  height: auto;
+  border: 0px solid green;
+  margin-bottom: 20px;
+}
+
+/* ----------- Responsive para pantallas pequeñas ----------- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .card-juego img {
+    max-width: 100%;
+  }
+
+  .img-relativa {
+    width: 100%;
+  }
+
+  .btn-jugar {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .descripcion {
+    padding: 20px 10px;
+    font-size: 15px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+}
